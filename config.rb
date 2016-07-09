@@ -46,8 +46,11 @@ end
 #Deploy Configurations
 activate :deploy do |deploy|
   deploy.deploy_method = :git
-  deploy.branch = 'gh-pages'
+  deploy.branch = 'master'
   deploy.build_before = true
 end
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-80545023-1'
+end
 activate :directory_indexes

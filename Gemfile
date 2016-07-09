@@ -19,3 +19,4 @@ source 'https://rails-assets.org' do
 end
 
 gem 'middleman-deploy', '~> 2.0.0-alpha'
+gem 'middleman-google-analytics', '~> 2.1'
