@@ -38,6 +38,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  # Minify HTML on build
+  activate :minify_html
+
   activate :relative_assets
   activate :asset_hash
   # activate :asset_host,  :host => 'gurvircheema.com'
