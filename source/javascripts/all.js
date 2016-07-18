@@ -1,6 +1,9 @@
 // This is where it all goes :)
 //= require jquery
 //= require slick.js.js
+$(window).resize(function(){
+  location.reload();
+})
 
 $(document).ready(function(){
 
@@ -10,7 +13,7 @@ $(document).ready(function(){
     arrows: false,
     fade: true,
     autoplay: true,
-    asNavFor: ".slider-nav"
+    asNavFor: ".slider-nav",
   });
   $('.slider-nav').slick({
     slidesToShow: 3,
@@ -20,6 +23,13 @@ $(document).ready(function(){
     centerMode: true,
     focusOnSelect: true
   })
+
+  $('.slick-nav .slick-slider').eq(0).addClass('slick-current');
+
+  $('.slider-for').on('afterChange', function(event, slick, i){
+    $('.slider-nav .slick-slide').removeClass('slick-current');
+    $('.slider-nav .slick-slide').eq(i).addClass('slick-current');
+  });
 
   $('a[href*="#"]:not(a[href="#"])').click(function(){
     event.preventDefault();

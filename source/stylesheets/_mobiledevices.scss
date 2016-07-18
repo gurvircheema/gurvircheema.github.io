@@ -219,6 +219,7 @@
           height: 50px;
           line-height: 50px;
           &:hover {
+            cursor: pointer;
             transform: scale(1.2);
             transition: all 0.3s ease-in-out;
             color: #4c8fec;

@@ -52,7 +52,9 @@ body {
   transform: translate3d(0px, 0px, 0px);
 }
 
-
+.slick-current {
+  color: #4c8fec;
+}
 
 @import "mobiledevices";
 
@@ -264,6 +266,7 @@ body {
           height: 50px;
           line-height: 50px;
           &:hover {
+            cursor: pointer;
             transform: scale(1.2);
             transition: all 0.3s ease-in-out;
             color: #4c8fec;
@@ -494,8 +497,10 @@ body {
     width: 60px;
     text-align: center;
     z-index: 1000;
-    box-shadow: rgba(0, 0, 0, 0.75) 2px 5px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.75) 2px 5px 10px 0px, 1px 5px 5px 0px rgba(255, 255, 255, 0.7);
   }
+
+
   // Footer CSS
   #footer {
     position: fixed;
