@@ -4,11 +4,10 @@
 // Font Color
 $link-color: white;
 
+
 body {
   font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  width: 100vw;
-  height: 100vh;
   background-color: #00BC9E;
   color: white;
 }
@@ -16,40 +15,11 @@ body {
 .wrapper {
   position: relative;
   z-index: 2;
-  padding-bottom: 250px;
+  margin-bottom: 250px;
 }
 
 .cover {
   background-color: #00BC9E;
-}
-
-.animation-element {
-  position: relative;
-  display: none;
-}
-
-.in-view {
-  opacity: 1;
-  -moz-transition: all 1.5s ease-in-out;
-  -webkit-transition: all 1.5s ease-in-out;
-  -o-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out;
-}
-
-.slide-left {
-  -moz-transform: translate3d(-500px, 0px, 0px);
-  -webkit-transform: translate3d(-500px, 0px, 0px);
-  -o-transform: translate(-500px, 0px);
-  -ms-transform: translate(-500px, 0px);
-  transform: translate3d(-500px, 0px, 0px);
-}
-
-.slide-right {
-  -moz-transform: translate3d( 0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
 }
 
 .slick-current {
@@ -71,7 +41,7 @@ body {
     .navbar-content {
       position: relative;
       margin: 0 auto;
-      width: 70%;
+      width: 75%;
       padding: 30px;
       height: inherit;
     }
@@ -107,7 +77,7 @@ body {
         li {
           display: inline;
           margin: 10px;
-          padding: 14px 16px;
+          padding: 14px 5px;
 
           a {
             display: inline-block;
@@ -522,6 +492,10 @@ body {
         height: auto;
         margin: 10px 5px;
         vertical-align: middle;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 

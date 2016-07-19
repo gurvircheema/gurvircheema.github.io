@@ -1,9 +1,6 @@
 // This is where it all goes :)
 //= require jquery
 //= require slick.js.js
-$(window).resize(function(){
-  location.reload();
-})
 
 $(document).ready(function(){
 
@@ -31,9 +28,18 @@ $(document).ready(function(){
     $('.slider-nav .slick-slide').eq(i).addClass('slick-current');
   });
 
-  $('a[href*="#"]:not(a[href="#"])').click(function(){
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  // Smooth scrolling to in page divs
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
   });
 
   $('.top').click(function(){
