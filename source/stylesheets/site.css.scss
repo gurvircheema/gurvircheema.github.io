@@ -26,6 +26,11 @@ body {
   color: #4c8fec;
 }
 
+.error {
+  color: red;
+  display: inline-block;
+}
+
 @import "mobiledevices";
 
 @media only screen and (min-width: 768px) {

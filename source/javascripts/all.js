@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 
+  // Configuration for slick slider
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -12,6 +13,7 @@ $(document).ready(function(){
     autoplay: true,
     asNavFor: ".slider-nav",
   });
+
   $('.slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -27,6 +29,8 @@ $(document).ready(function(){
     $('.slider-nav .slick-slide').removeClass('slick-current');
     $('.slider-nav .slick-slide').eq(i).addClass('slick-current');
   });
+
+
 
   // Smooth scrolling to in page divs
   $('a[href*=#]:not([href=#])').click(function() {
@@ -46,11 +50,25 @@ $(document).ready(function(){
     $('html,body').animate({scrollTop:(0,0)}, 500);
   });
 
+  // Contact form submission
   $('contact_form').submit(function(e){
     e.preventDefault();
     $(this).parent().append("<p style='color:red;'>Submitted</p>")
   })
 
+  $('#contact_form').validate({
+    rules: {
+      name: { required: true },
+      _replyto: {
+        required: true,
+        email: true
+      },
+      _subject: { required: true, minlength: 3 },
+      message: { required: true, minlength: 5 }
+    }
+  });
+
+  //Toggle class for menu sidebaar
   $('#menu-icon').click(function(){
     $(this).next().toggleClass('show-menu');
   });
