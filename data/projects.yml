@@ -1,4 +1,22 @@
 -
+  name: Absolute Drive
+  description: A multi-purpose platform for dealers to sell cars, customers to view offers, admins to manage all kinds of data.
+  date: September 06, 2016 - December 07, 2017
+  status: Last Job
+  skills:
+    - Ruby on Rails
+    - HTML5
+    - CSS3
+    - Angular
+    - Minitest
+    - Bootstrap
+    - Haml
+    - Font Awesome
+    - SASS
+    - AWS
+  hosted: https://pro.absolutedrive.com/sign_i
+  image: absolutedrive.png
+-
   name: Glitz'n Glam
   description: E-Commerce website for designer clothing shop
   date: April 20, 2016

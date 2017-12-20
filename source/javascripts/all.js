@@ -1,9 +1,10 @@
 // This is where it all goes :)
 //= require jquery
 //= require slick.js.js
-
+$('.top').hide();
 $(document).ready(function(){
-
+  $('.top').hide()
+  document.addEventListener('scroll', hideScrollTopButton)
   // Configuration for slick slider
   $('.slider-for').slick({
     slidesToShow: 1,
@@ -88,6 +89,16 @@ $(document).ready(function(){
         'transform': 'translate(0px, -' + wScroll/40 + '%)'
       });
     });
+  }
+
+  function hideScrollTopButton(){
+    skillOffsetTop = document.getElementById('skills').offsetTop;
+    offsetTop = window.pageYOffset;
+    if(offsetTop >= skillOffsetTop) {
+      $('.top').show();
+    } else {
+      $('.top').hide();
+    }
   }
 })
 
